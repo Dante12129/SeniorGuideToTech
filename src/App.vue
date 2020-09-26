@@ -5,10 +5,10 @@
     </v-app-bar>
 
     <v-main>
-      <Main />
+      <Main :text="text" />
     </v-main>
 
-    <MainNavigation app />
+    <MainNavigation @update:selected="text = $event" />
   </v-app>
 </template>
 
@@ -25,7 +25,7 @@ export default {
   },
 
   data: () => ({
-    //
+    text: 'Nothing selected yet'
   }),
 
   created() {

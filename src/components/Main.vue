@@ -1,10 +1,13 @@
 <template>
-  <p>Blah</p>
+  <p>{{ text }}</p>
 </template>
 
 <script>
 export default {
-  name: "Main"
+  name: "Main",
+  props: {
+    text: String
+  }
 }
 </script>
 

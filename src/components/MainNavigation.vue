@@ -1,5 +1,5 @@
 <template>
-  <v-bottom-navigation v-model="selected" absolute>
+  <v-bottom-navigation v-model="selected" @change="$emit('update:selected', selected)" app grow>
     <v-btn v-for="(cat, index) in categories" :key="index" :value="cat">
       <span>{{ cat }}</span>
       <v-icon>mdi-alpha-{{ cat.charAt(0).toLowerCase() }}-box</v-icon>
@@ -15,7 +15,7 @@ export default {
       selected: '',
       categories: ['Financial', 'Social', 'Entertainment', 'Shopping']
     }
-  }
+  },
 }
 </script>
 
