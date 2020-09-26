@@ -6,7 +6,9 @@
 
     <v-main>
 <!--      <h2>{{ text }}</h2>-->
-      <component :is="text"></component>
+      <keep-alive>
+        <component :is="text"></component>
+      </keep-alive>
     </v-main>
 
     <MainNavigation @change="text = $event"></MainNavigation>
