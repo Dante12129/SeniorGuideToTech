@@ -2,6 +2,9 @@
 <v-list>
   <v-list-item-group v-model="selected">
     <v-list-item v-for="(cat, index) in categories" :key="index">
+      <v-list-item-icon>
+        <v-icon>mdi-alpha-{{ cat.charAt(0).toLowerCase() }}-box</v-icon>
+      </v-list-item-icon>
       <v-list-item-content>
         <v-list-item-title v-text="cat"></v-list-item-title>
       </v-list-item-content>
@@ -18,7 +21,7 @@ export default {
       selected: 1,
       categories: ['Financial', 'Social', 'Entertainment', 'Shopping']
     }
-  }
+  },
 }
 </script>
 
