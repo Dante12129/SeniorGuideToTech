@@ -5,7 +5,8 @@
     </v-app-bar>
 
     <v-main>
-      <h2>{{ text }}</h2>
+<!--      <h2>{{ text }}</h2>-->
+      <component :is="text"></component>
     </v-main>
 
     <MainNavigation @change="text = $event"></MainNavigation>
@@ -14,15 +15,18 @@
 
 <script>
 import MainNavigation from "@/components/MainNavigation";
+import Financial from "@/components/Financial";
+
 export default {
   name: 'App',
 
   components: {
-    MainNavigation
+    MainNavigation,
+    Financial
   },
 
   data: () => ({
-    text: 'Nothing selected yet'
+    text: 'Financial'
   }),
 
   created() {
