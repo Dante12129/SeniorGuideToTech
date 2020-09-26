@@ -10,8 +10,8 @@
       <v-icon>mdi-alpha-s-box</v-icon>
     </v-btn>
 
-    <v-btn  value="Entertainmnment">
-      <span></span>
+    <v-btn value="Entertainment">
+      <span>Entertainment</span>
       <v-icon>mdi-alpha-e-box</v-icon>
     </v-btn>
 
