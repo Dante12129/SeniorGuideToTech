@@ -8,7 +8,7 @@
       <h2>{{ text }}</h2>
     </v-main>
 
-    <MainNavigation></MainNavigation>
+    <MainNavigation @change="text = $event"></MainNavigation>
   </v-app>
 </template>
 

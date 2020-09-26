@@ -1,21 +1,21 @@
 <template>
-  <v-bottom-navigation app grow>
-    <v-btn>
+  <v-bottom-navigation app grow @change="$emit('change', $event)">
+    <v-btn value="Financial">
       <span>Financial</span>
       <v-icon>mdi-alpha-f-box</v-icon>
     </v-btn>
 
-    <v-btn>
+    <v-btn value="Social">
       <span>Social</span>
       <v-icon>mdi-alpha-s-box</v-icon>
     </v-btn>
 
-    <v-btn>
-      <span>Entertainment</span>
+    <v-btn  value="Entertainmnment">
+      <span></span>
       <v-icon>mdi-alpha-e-box</v-icon>
     </v-btn>
 
-    <v-btn>
+    <v-btn value="Shopping">
       <span>Shopping</span>
       <v-icon>mdi-alpha-s-box</v-icon>
     </v-btn>
