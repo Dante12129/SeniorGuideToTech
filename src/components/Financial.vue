@@ -48,3 +48,13 @@
 
   </v-expansion-panels>
 </template>
+
+<script>
+export default {
+  name: "Financial"
+}
+</script>
+
+<style scoped>
+
+</style>
