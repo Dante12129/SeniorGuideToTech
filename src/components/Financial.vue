@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <v-list shaped>
       <v-subheader>REPORTS</v-subheader>
       <v-list-item-group v-model="item" color="primary">
@@ -27,4 +27,24 @@
       ],
     }),
   }
-</script>
+</script> -->
+
+<template>
+  <v-expansion-panels>
+
+    <v-expansion-panel>
+      <v-expansion-panel-header>Capital One</v-expansion-panel-header>
+      <v-expansion-panel-content>
+        [Instructions go here]
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+
+    <v-expansion-panel>
+      <v-expansion-panel-header>Bank of America</v-expansion-panel-header>
+      <v-expansion-panel-content>
+        [Instructions go here]
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+
+  </v-expansion-panels>
+</template>
