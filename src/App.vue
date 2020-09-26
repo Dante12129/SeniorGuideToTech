@@ -16,13 +16,19 @@
 <script>
 import MainNavigation from "@/components/MainNavigation";
 import Financial from "@/components/Financial";
+import Social from "@/components/Social";
+import Entertainment from "@/components/Entertainment";
+import Shopping from "@/components/Shopping";
 
 export default {
   name: 'App',
 
   components: {
     MainNavigation,
-    Financial
+    Financial,
+    Social,
+    Entertainment,
+    Shopping
   },
 
   data: () => ({
