@@ -1,21 +1,30 @@
 <template>
-  <v-bottom-navigation v-model="selected" @change="$emit('update:selected', selected)" app grow>
-    <v-btn v-for="(cat, index) in categories" :key="index" :value="cat">
-      <span>{{ cat }}</span>
-      <v-icon>mdi-alpha-{{ cat.charAt(0).toLowerCase() }}-box</v-icon>
+  <v-bottom-navigation app grow>
+    <v-btn>
+      <span>Financial</span>
+      <v-icon>mdi-alpha-f-box</v-icon>
+    </v-btn>
+
+    <v-btn>
+      <span>Social</span>
+      <v-icon>mdi-alpha-s-box</v-icon>
+    </v-btn>
+
+    <v-btn>
+      <span>Entertainment</span>
+      <v-icon>mdi-alpha-e-box</v-icon>
+    </v-btn>
+
+    <v-btn>
+      <span>Shopping</span>
+      <v-icon>mdi-alpha-s-box</v-icon>
     </v-btn>
   </v-bottom-navigation>
 </template>
 
 <script>
 export default {
-  name: "MainNavigation",
-  data: function () {
-    return {
-      selected: '',
-      categories: ['Financial', 'Social', 'Entertainment', 'Shopping']
-    }
-  },
+  name: "MainNavigation"
 }
 </script>
 

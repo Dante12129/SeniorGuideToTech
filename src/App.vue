@@ -5,23 +5,20 @@
     </v-app-bar>
 
     <v-main>
-      <Main :text="text" />
+      <h2>{{ text }}</h2>
     </v-main>
 
-    <MainNavigation @update:selected="text = $event" />
+    <MainNavigation></MainNavigation>
   </v-app>
 </template>
 
 <script>
-
-import Main from "@/components/Main";
 import MainNavigation from "@/components/MainNavigation";
 export default {
   name: 'App',
 
   components: {
-    MainNavigation,
-    Main
+    MainNavigation
   },
 
   data: () => ({
