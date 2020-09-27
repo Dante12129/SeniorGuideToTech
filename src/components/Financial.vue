@@ -35,7 +35,11 @@
     <v-expansion-panel>
       <v-expansion-panel-header>Capital One</v-expansion-panel-header>
       <v-expansion-panel-content>
-        [Instructions go here]
+        <p>ATMs</p>
+        <v-container v-if="atms.length !== 0" class="d-md-flex flex-wrap justify-space-around align-center">
+            <ATM v-for="(atm, index) in atms" :key="index" :machine="atm"/>
+        </v-container>
+        <p v-else>No ATMs Found</p>
       </v-expansion-panel-content>
     </v-expansion-panel>
 
@@ -50,8 +54,30 @@
 </template>
 
 <script>
+import ATM from "@/components/ATM";
+
 export default {
-  name: "Financial"
+  name: "Financial",
+  components: {
+    ATM
+  },
+  data: function () {
+    return {
+      pos: null,
+      atms: []
+    }
+  },
+  mounted: function () {
+    navigator.geolocation.getCurrentPosition(position => {
+      console.log(position);
+      this.pos = position;
+      fetch(`http://api.reimaginebanking.com/atms?lat=${this.pos.coords.latitude}&lng=${this.pos.coords.longitude}&rad=10&key=d9597ddde1565ed544f717ca3004121d`).then(response => response.json()).then(
+          data => {
+            data.data.forEach(element => this.atms.push(element));
+          }
+      );
+    });
+  }
 }
 </script>
 
