@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\public",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\components",
+    "\\src\\images_Social",
+    "\\src\\plugins"
   ],
+  "SelectedNode": "\\src\\images_Social\\Zoom_Launched.PNG",
   "PreviewInSolutionExplorer": false
 }
