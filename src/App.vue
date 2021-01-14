@@ -5,7 +5,7 @@
     </v-app-bar>
 
     <v-main>
-<!--      <h2>{{ text }}</h2>-->
+      <!--      <h2>{{ text }}</h2>-->
       <keep-alive>
         <component :is="text"></component>
       </keep-alive>
@@ -21,24 +21,26 @@ import Financial from "@/components/Financial";
 import Social from "@/components/Social";
 import Entertainment from "@/components/Entertainment";
 import Shopping from "@/components/Shopping";
+import VirtualAssistant from "@/components/VirtualAssistant";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
     MainNavigation,
     Financial,
     Social,
     Entertainment,
-    Shopping
+    Shopping,
+    VirtualAssistant,
   },
 
   data: () => ({
-    text: 'Financial'
+    text: "Financial",
   }),
 
   created() {
-    this.$vuetify.theme.dark = true
-  }
+    this.$vuetify.theme.dark = true;
+  },
 };
 </script>
