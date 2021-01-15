@@ -19,15 +19,18 @@
       <span>Shopping</span>
       <v-icon>mdi-alpha-s-box</v-icon>
     </v-btn>
+
+    <v-btn value="VirtualAssistant">
+      <span>Virtual Assistant</span>
+      <v-icon>mdi-alpha-v-box</v-icon>
+    </v-btn>
   </v-bottom-navigation>
 </template>
 
 <script>
 export default {
-  name: "MainNavigation"
-}
+  name: "MainNavigation",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
